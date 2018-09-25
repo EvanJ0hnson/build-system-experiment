@@ -1,0 +1,55 @@
+{
+  "name": "react-starter",
+  "version": "0.1.0",
+  "author": "Ivan Gerasimov",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 10.9.0"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "prop-types": "15.6.2",
+    "ramda": "0.25.0",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "styled-components": "4.0.0-beta.9"
+  },
+  "devDependencies": {
+    "@babel/core": "7.1.0",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-eslint": "10.0.0",
+    "babel-loader": "8.0.2",
+    "babel-plugin-styled-components": "1.7.1",
+    "clean-webpack-plugin": "0.1.19",
+    "copy-webpack-plugin": "4.5.2",
+    "cross-env": "5.2.0",
+    "eslint": "5.6.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-react": "7.11.1",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "prettier": "1.14.3",
+    "stylelint": "9.5.0",
+    "stylelint-config-recommended": "2.1.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-custom-processor-loader": "0.5.0",
+    "stylelint-processor-styled-components": "1.3.2",
+    "webpack": "4.20.1",
+    "webpack-bundle-analyzer": "3.0.2",
+    "webpack-cli": "3.1.1",
+    "webpack-dev-server": "3.1.9",
+    "webpack-merge": "4.1.4",
+    "webpack-stylish": "0.1.8"
+  },
+  "scripts": {
+    "analyze": "cross-env NODE_ENV=production webpack --config .build-system/webpack/webpack.prod.analyze.js",
+    "build": "cross-env NODE_ENV=production webpack --config .build-system/webpack/webpack.prod.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config .build-system/webpack/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
