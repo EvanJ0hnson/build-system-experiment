@@ -1,6 +1,6 @@
 const { Parser } = require('./parser.const');
 const { RuleState } = require('./rule-state.const');
-const { Rule, PRT } = require('./rule.const');
+const { Rule } = require('./rule.const');
 const { RuleSet } = require('./rule-set.const');
 
 const prettierrc = require('../prettierrc');
