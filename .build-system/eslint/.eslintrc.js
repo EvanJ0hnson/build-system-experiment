@@ -1,7 +1,16 @@
 const { Parser } = require('./parser.const');
 const { RuleState } = require('./rule-state.const');
-const { Rule } = require('./rule.const');
+const { Rule, PRT } = require('./rule.const');
 const { RuleSet } = require('./rule-set.const');
+
+const prettierrc = require('../prettierrc');
+
+/**
+ * @desc 
+ * Alias for Rule.PRETTIER since ESLint doesn't allow to use it for some reason
+ * @type {string}
+ */
+const RULE_PRETTIER = 'prettier/prettier';
 
 /**
  * @todo
@@ -36,6 +45,9 @@ module.exports = {
     },
   },
   rules: {
+    /** Prettier */
+    [RULE_PRETTIER]: [RuleState.ERROR, prettierrc],
+
     /** Override */
     [Rule.NO_CONSOLE]: RuleState.WARN,
     [Rule.NO_UNUSED_VARS]: RuleState.WARN,

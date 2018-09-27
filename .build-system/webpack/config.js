@@ -1,5 +1,8 @@
-const { UP, SRC, DIST, PUBLIC, INDEX_JS, INDEX_HTML } = require('./const');
-const { makePath } = require('./utils');
+const {
+  UP, SRC, DIST, PUBLIC, INDEX_JS, INDEX_HTML,
+  BUILD_SYSTEM, ESLINT, ESLINTRC_JS, STYLELINT, STYLELINTRC_JS,
+} = require('./const');
+const { makePath, makeRelativePath } = require('./utils');
 
 const projectRoot = makePath(UP, UP);
 const srcPath = makePath(projectRoot, SRC);
@@ -8,6 +11,11 @@ const publicPath = makePath(projectRoot, PUBLIC);
 
 const indexJsPath = makePath(srcPath, INDEX_JS);
 const indexHtmlPath = makePath(publicPath, INDEX_HTML);
+
+const esLintConfigPath = makePath(UP, ESLINT, ESLINTRC_JS);
+const stylelintConfigPath = makeRelativePath(
+  BUILD_SYSTEM, STYLELINT, STYLELINTRC_JS,
+);
 
 const projectPath = {
   root: projectRoot,
@@ -19,6 +27,12 @@ const projectPath = {
   indexHtml: indexHtmlPath,
 };
 
+const configPath = {
+  esLint: esLintConfigPath,
+  stylelint: stylelintConfigPath,
+}
+
 module.exports = {
   projectPath,
+  configPath,
 };

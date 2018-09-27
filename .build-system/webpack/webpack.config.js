@@ -2,7 +2,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Stylish = require('webpack-stylish');
 
-const { projectPath } = require('./config');
+const babelrc = require('../babel');
+
+const { configPath, projectPath } = require('./config');
 const { INDEX_HTML, Loader, TestRegExp, Stats, Enforce } = require('./const');
 
 module.exports = {
@@ -21,6 +23,7 @@ module.exports = {
         exclude: TestRegExp.NODE_MODULES,
         loader: Loader.ESLINT,
         options: {
+          configFile: configPath.esLint,
           fix: true,
         },
       },
@@ -29,6 +32,9 @@ module.exports = {
         test: TestRegExp.JS,
         exclude: TestRegExp.NODE_MODULES,
         loader: Loader.STYLELINT_CUSTOM_PROCESSOR,
+        options: {
+          configPath: configPath.stylelint,
+        },
       },
       {
         test: TestRegExp.JS,
@@ -36,6 +42,7 @@ module.exports = {
         use: [
           {
             loader: Loader.BABEL,
+            options: babelrc,
           },
         ],
 			},

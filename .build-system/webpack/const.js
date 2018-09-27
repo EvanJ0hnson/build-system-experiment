@@ -6,12 +6,24 @@ const PUBLIC = 'public';
 const SRC = 'src';
 
 /** @type {string} */
+const BUILD_SYSTEM = '.build-system';
+/** @type {string} */
 const UP = '..';
 
 /** @type {string} */
 const INDEX_HTML = 'index.html';
 /** @type {string} */
-const INDEX_JS = 'index.js'
+const INDEX_JS = 'index.js';
+
+/** @type {string} */
+const ESLINT = 'eslint';
+/** @type {string} */
+const ESLINTRC_JS = '.eslintrc.js';
+
+/** @type {string} */
+const STYLELINT = 'stylelint';
+/** @type {string} */
+const STYLELINTRC_JS = '.stylelintrc.js';
 
 /** @type {string} */
 const CHEAP_MODULE_EVAL_SOURCE_MAP = 'cheap-module-eval-source-map';
@@ -105,10 +117,16 @@ module.exports = {
   PUBLIC,
   SRC,
 
+  BUILD_SYSTEM,
   UP,
 
   INDEX_HTML,
   INDEX_JS,
+
+  ESLINT,
+  ESLINTRC_JS,
+  STYLELINT,
+  STYLELINTRC_JS,
 
   Env,
   Devtool,
