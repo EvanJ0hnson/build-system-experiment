@@ -4,7 +4,7 @@ const {
 } = require('./const');
 const { makePath, makeRelativePath } = require('./utils');
 
-const projectRoot = makePath(UP, UP);
+const projectRoot = makePath(UP, UP, 'app');
 const srcPath = makePath(projectRoot, SRC);
 const buildPath = makePath(projectRoot, DIST);
 const publicPath = makePath(projectRoot, PUBLIC);
