@@ -1,0 +1,27 @@
+{
+  "name": "react-starter",
+  "version": "0.1.0",
+  "author": "Ivan Gerasimov",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 10.9.0"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "prop-types": "15.6.2",
+    "ramda": "0.25.0",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "styled-components": "4.0.0-beta.9"
+  },
+  "devDependencies": {
+    "@lv48/build": "file:/Users/EvanJ0hnson/Sites/lv-48/build-system-experiment/.build-system"
+  },
+  "scripts": {
+    "analyze": "cross-env NODE_ENV=production webpack --config .build-system/webpack/webpack.prod.analyze.js",
+    "build": "cross-env NODE_ENV=production webpack --config .build-system/webpack/webpack.prod.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config .build-system/webpack/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
