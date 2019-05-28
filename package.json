@@ -42,7 +42,7 @@
     "webpack": "4.20.1",
     "webpack-bundle-analyzer": "3.0.2",
     "webpack-cli": "3.1.1",
-    "webpack-dev-server": "3.1.9",
+    "webpack-dev-server": "3.4.1",
     "webpack-merge": "4.1.4",
     "webpack-stylish": "0.1.8"
   },
